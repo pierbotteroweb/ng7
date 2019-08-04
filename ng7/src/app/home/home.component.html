@@ -1,0 +1,15 @@
+<button (click)="firstClick()">Click me</button>
+<h1 [class.gray]="h1Style" >Home</h1>
+
+<h1 [ngClass]="{
+    'gray': h1Style,
+    'large': !h1Style
+}" >Home (Forma diferente de class binding)</h1>
+
+<h1 [style.color]="h1Style?'gray':'green'">Home</h1>
+
+<h1 [ngStyle]="{
+    'color': h1Style?'pink':'black',
+    'font-size': h1Style?'1em':'.5em'
+}">Home</h1>
+
